@@ -11,7 +11,7 @@ class Carre:
         self.side = cote
         self.perimetre = self.perimeter()
         self.aire = self.area()
-        Carre.count += 1
+        self.__class__.count += 1
 
     def perimeter(self):
         """Méthode retournant le périmètre d'un carré"""
@@ -19,7 +19,7 @@ class Carre:
 
     def area(self):
         """"Méthode permettant d'afficher l'aire d'un carré"""
-        return self.side * self.side
+        return self.side **2
 
     def __repr__(self):
         return "Le carré à un côté d'une longueur de {}cm, une aire de {}cm2 et un périmètre de {}cm".format(self.side, self.aire, self.perimetre)
@@ -30,8 +30,7 @@ class Carre:
 
     def __add__(self, other):
         """Méthode permettant d'additionner deux carrés."""
-        add_square = self.side + other.side
-        return Carre(add_square)
+        return Carre(self.side + other.side)
 
     def __sub__(self, other):
         """Méthode permettant de soustraire deux carrés."""
