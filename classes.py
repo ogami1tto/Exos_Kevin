@@ -41,6 +41,11 @@ class Carre:
         """Méthode permettant de vérifier si un premier carré est plus petit qu'un autre."""
         lower = self.side < other.side
         return bool(lower)
+    
+        #if self.side  < other.side:
+            #return true
+        #return false
+    
 
     def __gt__(self, other):
         """Méthode permettant de vérifier si un premier carré est plus grand qu'un autre."""
